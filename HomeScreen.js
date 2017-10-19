@@ -18,6 +18,12 @@ export default class HomeScreen extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.pageName}>Home Screen</Text>
+        <Touchable onPress={() => this.props.navigation.navigate("category")}>
+          PUSH
+        </Touchable>
+        <Touchable onPress={() => this.props.navigation.navigate("cart")}>
+          MODAL
+        </Touchable>
         <Touchable
           onPress={() => {
             this.props.navigation.dispatch(
@@ -32,11 +38,7 @@ export default class HomeScreen extends Component {
             );
           }}
         >
-          REPLACE with One
-        </Touchable>
-
-        <Touchable onPress={() => this.props.navigation.navigate("one")}>
-          PUSH to 1
+          REPLACE with Custom Header Screen
         </Touchable>
       </View>
     );

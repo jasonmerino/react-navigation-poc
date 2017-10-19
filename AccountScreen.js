@@ -15,13 +15,7 @@ export default class AccountScreen extends Component {
         <Text style={styles.pageName}>Account Screen</Text>
         <Touchable
           onPress={() => {
-            this.props.navigation.dispatch(
-              NavigationActions.reset({
-                index: 0,
-                key: "root",
-                actions: [NavigationActions.navigate({ routeName: "shopTab" })]
-              })
-            );
+            this.props.navigation.navigate("product");
           }}
         >
           Shop tab, product page

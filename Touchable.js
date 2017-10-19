@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Platform, StyleSheet, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
 
-export default class OneScreen extends Component {
+export default class Touchable extends Component {
   static navigationOptions = {
     title: "One"
   };

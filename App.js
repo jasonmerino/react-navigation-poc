@@ -9,8 +9,8 @@ import {
 import HomeScreen from "./HomeScreen";
 import CartTabScreen from "./CartTabScreen";
 import AccountScreen from "./AccountScreen";
-import OneScreen from "./OneScreen";
-import TwoScreen from "./TwoScreen";
+import CategoryScreen from "./CategoryScreen";
+import ProductDropsScreen from "./ProductDropsScreen";
 import CustomHeaderScreen from "./CustomHeaderScreen";
 import ProductScreen from "./ProductScreen";
 import CartScreen from "./CartScreen";
@@ -20,14 +20,19 @@ import Tabs from "./routers/TabNavigator";
 const Root = StackNavigator(
   {
     root: {
-      screen: navigationUtils.componentizeNavigator(Tabs)
+      screen: Tabs
     },
-    cart: navigationUtils.createScreen(CartScreen, "cart")
+    cart: {
+      screen: CartScreen,
+      path: "cart"
+    }
   },
   {
-    headerMode: "none"
+    headerMode: "none",
+    mode: "card",
+    initialRouteName: "root"
   },
   true
 );
 
-export default navigationUtils.componentizeNavigator(Root);
+export default Root;

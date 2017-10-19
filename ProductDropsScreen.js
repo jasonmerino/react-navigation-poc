@@ -4,22 +4,20 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 import styles from "./styles";
 import Touchable from "./Touchable";
 
-export default class TwoScreen extends Component {
+export default class ProductDropsScreen extends Component {
   static navigationOptions = {
-    title: "Two"
+    title: "Product Drops"
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.pageName}>Two Screen</Text>
+        <Text style={styles.pageName}>Product Drops Screen</Text>
         <Touchable onPress={() => this.props.navigation.goBack()}>
           POP
         </Touchable>
-        <Touchable
-          onPress={() => this.props.navigation.navigate("customHeader")}
-        >
-          PUSH to CustomHeader
+        <Touchable onPress={() => this.props.navigation.navigate("product")}>
+          PUSH
         </Touchable>
       </View>
     );

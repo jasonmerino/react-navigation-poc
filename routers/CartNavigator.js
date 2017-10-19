@@ -3,7 +3,10 @@ import navigationUtils from "../utils/navigationUtils";
 import CartTabScreen from "../CartTabScreen";
 
 const CartStackNavigator = StackNavigator({
-  cartTabScreen: navigationUtils.createScreen(CartTabScreen, "cart/index")
+  cartTabScreen: {
+    screen: CartTabScreen,
+    path: "cart/index"
+  }
 });
 
 export default CartStackNavigator;

@@ -1,21 +1,33 @@
 import { StackNavigator, NavigationActions } from "react-navigation";
 import navigationUtils from "../utils/navigationUtils";
 import HomeScreen from "../HomeScreen";
-import OneScreen from "../OneScreen";
-import TwoScreen from "../TwoScreen";
+import CategoryScreen from "../CategoryScreen";
+import ProductDropsScreen from "../ProductDropsScreen";
 import CustomHeaderScreen from "../CustomHeaderScreen";
 import ProductScreen from "../ProductScreen";
 
 const ShopStackNavigator = StackNavigator(
   {
-    shop: navigationUtils.createScreen(HomeScreen, "shop/index"),
-    one: navigationUtils.createScreen(OneScreen, "shop/one"),
-    two: navigationUtils.createScreen(TwoScreen, "shop/two"),
-    customHeader: navigationUtils.createScreen(
-      CustomHeaderScreen,
-      "shop/customHeader"
-    ),
-    product: navigationUtils.createScreen(ProductScreen, "shop/product")
+    shop: {
+      screen: HomeScreen,
+      path: "shop/index"
+    },
+    category: {
+      screen: CategoryScreen,
+      path: "shop/category"
+    },
+    productDrops: {
+      screen: ProductDropsScreen,
+      path: "shop/product-drop"
+    },
+    customHeader: {
+      screen: CustomHeaderScreen,
+      path: "shop/custom-header"
+    },
+    product: {
+      screen: ProductScreen,
+      path: "shop/product"
+    }
   },
   {
     navigationOptions: {

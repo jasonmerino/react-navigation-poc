@@ -7,7 +7,7 @@ import AccountStackNavigator from "./AccountNavigator";
 const Tabs = TabNavigator(
   {
     shopTab: {
-      screen: navigationUtils.componentizeNavigator(ShopStackNavigator),
+      screen: ShopStackNavigator,
       path: "shop",
       navigationOptions: {
         tabBarLabel: "Shop"
@@ -15,10 +15,10 @@ const Tabs = TabNavigator(
       initialRouteName: "customHeader"
     },
     cartTab: {
-      screen: navigationUtils.componentizeNavigator(CartStackNavigator)
+      screen: CartStackNavigator
     },
     accountTab: {
-      screen: navigationUtils.componentizeNavigator(AccountStackNavigator),
+      screen: AccountStackNavigator,
       path: "account",
       navigationOptions: {
         tabBarLabel: "Account"
@@ -30,7 +30,9 @@ const Tabs = TabNavigator(
     tabBarOptions: {
       activeTintColor: "#e91e63"
     },
-    initialRouteName: "shopTab"
+    initialRouteName: "shopTab",
+    tabBarPosition: "bottom",
+    animationEnabled: false
   }
 );
 

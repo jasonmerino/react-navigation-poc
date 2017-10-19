@@ -5,11 +5,9 @@ import styles from "./styles";
 export default class CartTabScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     tabBarOnPress: () => {
-      navigation.navigate("one");
-      console.log(navigation);
-      debugger;
+      navigation.navigate("cart");
     },
-    title: "NONE"
+    title: "Cart"
   });
 
   render() {

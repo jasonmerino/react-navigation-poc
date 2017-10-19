@@ -4,36 +4,38 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 import styles from "./styles";
 import Touchable from "./Touchable";
 
-export default class OneScreen extends Component {
+export default class CategoryScreen extends Component {
   static navigationOptions = {
-    title: "One"
+    title: "Category"
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.pageName}>One Screen</Text>
-        <Touchable
+        <Text style={styles.pageName}>Category Screen</Text>
+        {/* <Touchable
           onPress={() => {
             console.log(this.props.navigation.routes);
             debugger;
             this.props.navigation.dispatch(
               NavigationActions.reset({
                 index: 0,
-                key: null,
+                key: "root",
                 actions: [
                   NavigationActions.navigate({
-                    routeName: "two"
+                    routeName: "productDrops"
                   })
                 ]
               })
             );
           }}
         >
-          REPLACE with 2
-        </Touchable>
-        <Touchable onPress={() => this.props.navigation.navigate("two")}>
-          PUSH to 2
+          REPLACE with product drop
+        </Touchable> */}
+        <Touchable
+          onPress={() => this.props.navigation.navigate("productDrops")}
+        >
+          PUSH
         </Touchable>
       </View>
     );

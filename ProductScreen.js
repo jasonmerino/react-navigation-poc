@@ -5,16 +5,14 @@ import Touchable from "./Touchable";
 
 export default class ProductScreen extends Component {
   static navigationOptions = {
-    title: "Product"
+    title: "Product",
+    tabBarVisible: false
   };
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.pageName}>Product Screen</Text>
-        <Touchable onPress={() => this.props.navigation.goBack("shop/index")}>
-          Pop to Top
-        </Touchable>
       </View>
     );
   }
