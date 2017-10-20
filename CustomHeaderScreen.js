@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 import styles from "./styles";
-import CustomHeaderTitle from "./CustomHeaderTitle";
+import ProductNavigationBar from "./ProductNavigationBar";
 import Touchable from "./Touchable";
 
 export default class CustomHeaderScreen extends Component {
@@ -10,7 +10,7 @@ export default class CustomHeaderScreen extends Component {
       (navigation.state.params && navigation.state.params.count) || 0;
     return {
       headerTitle: (
-        <CustomHeaderTitle
+        <ProductNavigationBar
           title="Custom Header Title"
           subtitle={`Subtitle ${count}`}
         />

@@ -1,4 +1,5 @@
 import { TabNavigator, NavigationActions } from "react-navigation";
+import { Platform } from "react-native";
 import navigationUtils from "../utils/navigationUtils";
 import ShopStackNavigator from "./ShopNavigator";
 import CartStackNavigator from "./CartNavigator";
@@ -15,7 +16,10 @@ const Tabs = TabNavigator(
       initialRouteName: "customHeader"
     },
     cartTab: {
-      screen: CartStackNavigator
+      screen: CartStackNavigator,
+      navigationOptions: {
+        tabBarLabel: "Cart"
+      }
     },
     accountTab: {
       screen: AccountStackNavigator,
@@ -28,7 +32,11 @@ const Tabs = TabNavigator(
   },
   {
     tabBarOptions: {
-      activeTintColor: "#e91e63"
+      activeTintColor: "#00A499",
+      style: {
+        backgroundColor: "#fff"
+      },
+      inactiveTintColor: "#000"
     },
     initialRouteName: "shopTab",
     tabBarPosition: "bottom",

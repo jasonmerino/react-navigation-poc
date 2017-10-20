@@ -5,6 +5,7 @@ import CategoryScreen from "../CategoryScreen";
 import ProductDropsScreen from "../ProductDropsScreen";
 import CustomHeaderScreen from "../CustomHeaderScreen";
 import ProductScreen from "../ProductScreen";
+import styles from "../styles";
 
 const ShopStackNavigator = StackNavigator(
   {
@@ -31,6 +32,7 @@ const ShopStackNavigator = StackNavigator(
   },
   {
     navigationOptions: {
+      ...styles.navigationStyle,
       headerBackTitle: null // disabled text next to back button
     }
     // initialRouteName: "customHeader"

@@ -4,6 +4,7 @@ import styles from "./styles";
 
 export default class CartScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
+    headerMode: "float",
     title: "Cart"
   });
 

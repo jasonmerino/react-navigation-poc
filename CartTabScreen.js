@@ -6,8 +6,7 @@ export default class CartTabScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
     tabBarOnPress: () => {
       navigation.navigate("cart");
-    },
-    title: "Cart"
+    }
   });
 
   render() {

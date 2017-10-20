@@ -1,6 +1,6 @@
 # React Navigation POC
 
-## Requirements:
+## Requirements
  - ✅ **navigator push**
  - ✅ **navigator pop**
  - 👎🏼 **navigator replace**
@@ -13,21 +13,21 @@
  - ✅ **update route params**
  - ✅ **conduct navigation actions through non-screen level components**
 
-## Bonus points:
+## Bonus points
  - ✅ **hide tabbar for individual screen**
  - 😩 **standard and extendable deep link handling** _It exists, but it cannot be used with redux (https://github.com/react-community/react-navigation/issues/1106)_
  - ✅ **integrate with redux**
  - [ ] **translucent navigation bar**
 
-## Results:
+## Results
 
-### Pros:
- - Dead-simple deeplinking support
+### Pros
  - Navigate using `withNavigation` from non-screen components
- - Seems pretty consistently active
-![react-navigation activity](activity.png)
 
-### Cons:
+### Cons
  - No `replace()`, `popToTop()`, or `popN()` _(Show-stopper?)_
  - Transitions don't seem as smooth as `react-native-navigation`
  - Passing props into a component happens through `this.props.navigation.state.params` 👎🏼
+
+## Activity
+![react-navigation activity](activity.png)

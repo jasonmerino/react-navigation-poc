@@ -9,16 +9,23 @@ import {
 } from "react-native";
 import styles from "./styles";
 import Touchable from "./Touchable";
+import SearchHeader from "./SearchHeader";
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
-    title: "Home"
+    headerMode: "screen",
+    header: () => <SearchHeader />
   };
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.pageName}>Home Screen</Text>
-        <Touchable onPress={() => this.props.navigation.navigate("category")}>
+        <Touchable
+          onPress={() =>
+            this.props.navigation.navigate("category", {
+              categoryId: 123
+            })}
+        >
           PUSH
         </Touchable>
         <Touchable onPress={() => this.props.navigation.navigate("cart")}>

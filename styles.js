@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   touchable: {
     height: 44
   },
-  customHeaderTitle: {
+  ProductNavigationBar: {
     ...Platform.select({
       ios: {
         fontWeight: "bold",
@@ -31,6 +31,29 @@ const styles = StyleSheet.create({
       },
       android: {}
     })
+  }
+});
+
+styles.navigationStyle = Platform.select({
+  ios: {
+    headerTitleStyle: {
+      color: "#63666A"
+    },
+    headerStyle: {
+      backgroundColor: "#F5FCFF",
+      borderBottomWidth: 1,
+      borderBottomColor: "#ddd"
+    },
+    headerTintColor: "#00A499"
+  },
+  android: {
+    headerTitleStyle: {
+      color: "#fff"
+    },
+    headerStyle: {
+      backgroundColor: "#63666A"
+    },
+    headerTintColor: "#fff"
   }
 });
 
