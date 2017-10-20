@@ -1,4 +1,4 @@
-# React Navigation POC
+# react-navigation POC
 
 ## Requirements
  - ✅ **navigator push**
